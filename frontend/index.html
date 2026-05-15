@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyToken dApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo">
+        <span class="token-badge">MTK</span>
+        <h1>MyToken dApp</h1>
+      </div>
+      <span id="network-badge" class="network-badge hidden">Sepolia</span>
+    </header>
+
+    <main>
+
+      <!-- ── Connect ──────────────────────────────────────────── -->
+      <div id="connect-section" class="card">
+        <p class="subtitle">
+          Connect your MetaMask wallet to interact with MyToken on Sepolia.
+        </p>
+        <button id="connect-btn" class="btn btn-primary">Connect MetaMask</button>
+      </div>
+
+      <!-- ── Wrong network warning ────────────────────────────── -->
+      <div id="network-warning" class="card warning hidden">
+        <span>Wrong network detected. Please switch to <strong>Sepolia</strong>.</span>
+        <button id="switch-btn" class="btn btn-warning">Switch to Sepolia</button>
+      </div>
+
+      <!-- ── Wallet info (shown after connect) ────────────────── -->
+      <div id="wallet-section" class="card hidden">
+        <div class="section-title">Wallet</div>
+        <div class="info-row">
+          <span class="label">Address</span>
+          <span id="wallet-address" class="value mono" title="">—</span>
+        </div>
+        <div class="info-row">
+          <span class="label">MTK Balance</span>
+          <div class="balance-row">
+            <span id="mtk-balance" class="value balance">—</span>
+            <button id="refresh-btn" class="btn btn-ghost" title="Refresh balance">↻</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Send MTK (shown after connect) ───────────────────── -->
+      <div id="send-section" class="card hidden">
+        <div class="section-title">Send MTK</div>
+        <div class="form-group">
+          <label for="recipient">Recipient address</label>
+          <input id="recipient" type="text" placeholder="0x…" autocomplete="off" spellcheck="false" />
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount (MTK)</label>
+          <input id="amount" type="number" placeholder="0.0" min="0" step="any" />
+        </div>
+        <button id="send-btn" class="btn btn-primary">Send MTK</button>
+        <div id="tx-status" class="tx-status hidden"></div>
+      </div>
+
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
