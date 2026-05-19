@@ -14,8 +14,11 @@ A production-style ERC20 token built with Solidity and OpenZeppelin, deployed to
 | **Symbol** | MTK |
 | **Decimals** | 18 |
 | **Initial supply** | 1,000,000 MTK |
+| **Verified** | ✓ Source code verified on Etherscan |
 
-View on Etherscan: https://sepolia.etherscan.io/address/0x53C6B34161810fb57df803c0d1E3F608Bc0af91A
+Etherscan: https://sepolia.etherscan.io/address/0x53C6B34161810fb57df803c0d1E3F608Bc0af91A
+
+Source code: https://sepolia.etherscan.io/address/0x53C6B34161810fb57df803c0d1E3F608Bc0af91A#code
 
 ---
 
